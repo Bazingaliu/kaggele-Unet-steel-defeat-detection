@@ -8,4 +8,4 @@ The production process of flat sheet steel is especially delicate. From heating 
 In this competition, you¡¯ll help engineers improve the algorithm by localizing and classifying surface defects on a steel sheet.
 
 If successful, you¡¯ll help keep manufacturing standards for steel high and enable Severstal to continue their innovation, leading to a stronger, more efficient world all around us.
-这个比赛是用于检测钢铁是否存在缺陷，给出的训练数据集中有四类的缺陷情形，当然也存在没有划痕的情形。我先是研读了一份开源的kernel代码，今天对同组的同学的Unet深入的学习的一下，说一下具体思路。训练是采取的两次训练的方法，第一次先是在所有的数据集上进行训练一次，第二次再在全是缺陷的数据集上进行测试；细节方面提一下最后的Loss那里采取的是4个channel的输出，然后对每一个的channel表示一个二分类，采用交叉熵为损失函数。
+这个比赛是用于检测钢铁是否存在缺陷，给出的训练数据集中有四类的缺陷情形，当然也存在没有划痕的情形。我先是研读了一份开源的kernel代码，然后对同组的同学的Unet深入的学习的一下，说一下具体思路。训练是采取的两次训练的方法，第一次先是在所有的数据集上进行训练一次，第二次再在全是缺陷的数据集上进行测试；细节方面提一下最后的Loss那里采取的是4个channel的输出，然后对每一个的channel表示一个二分类，采用交叉熵为损失函数。
